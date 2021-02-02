@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+            width: auto;
+        }
+        #conta{
+            display: flex;
+            width: 50%;
+            height: 20px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #resultado {
+            width: 30%;
+            height: 20px;
+            text-align: center;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+    <title>Somando números</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <section>
+        <div id="conta">
+            <input type="number" name="n1" id="n1" value="0">
+            <p>+</p>
+            <input type="number" name="n2" id="n2" value="0">
+            <input type="button" value="Somar" onclick="somar()">
+        </div>
+        <label for="resultado">Resultado:</label>
+        <div id="resultado">
+            aguardando
+        </div>    
+    </section>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('n1')
+            var tn2 = window.document.getElementById('n2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var show = n1 + n2
+            var re = window.document.getElementById('resultado')
+
+            re.innerHTML = show
+        }
+    </script>
+</body>
+</html>
