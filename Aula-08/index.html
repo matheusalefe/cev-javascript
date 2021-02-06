@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            text-align: center
+        }
+    </style>
+    <title>ex010</title>
+</head>
+<body>
+    <h1>DETRAN</h1>
+    <h2>Verificação de multa</h2>
+    <div id="bloco-de-conteudo">
+        <label for="input">Velocidade obtida: </label><input type="number" id="velocidade"> Km/h
+        <input type="button" value="Enviar" onclick="calcular()">
+        <p id="texto"></p>
+    </div>
+    <script>
+        function calcular(){
+            var Tvelocidade = window.document.getElementById('velocidade')
+            var velocidade = Number(Tvelocidade.value)
+            var texto = window.document.getElementById('texto')
+            if(velocidade > 60){
+                texto.innerText = 'MULTADO!'
+            } else {
+                texto.innerText = 'LIBERADO!'
+            }
+        }
+    </script>
+</body>
+</html>
